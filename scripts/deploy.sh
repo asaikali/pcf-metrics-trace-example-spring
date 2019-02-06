@@ -12,7 +12,7 @@ PAYMENTS_APP_NAME="payments-$SUFFIX"
 ORDERS_APP_NAME="orders-$SUFFIX"
 SHOPPING_CART_APP_NAME="shopping-cart-$SUFFIX"
 
-./gradlew build
+./gradlew build -x test
 
 cf push $PAYMENTS_APP_NAME \
     -p applications/payments/build/libs/payments-trace-example-0.0.1-SNAPSHOT.jar \

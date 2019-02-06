@@ -33,7 +33,7 @@ public class PaymentsConnector {
     private ResponseEntity<String> request(String host, String path) {
         ResponseEntity<String> response;
 
-        final String uri = "http://" + host + path;
+        final String uri = "https://" + host + path;
         log.info("sending request to " + uri);
         try {
             response = this.restTemplate.getForEntity(uri, String.class);
